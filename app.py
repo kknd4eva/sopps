@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import json
 import os 
+st.set_page_config(page_title="Priceline Franchise Guru")
 
 hide_default_format = """
        <style>
@@ -12,7 +13,6 @@ hide_default_format = """
 st.markdown(hide_default_format, unsafe_allow_html=True)
 
 st.title("Priceline Franchise Guru")
-st.set_page_config(page_title="Priceline Franchise Guru")
 
 # Sidebar or another section for instructions or summary information
 st.sidebar.title("Sample questions to get started")
