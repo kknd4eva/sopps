@@ -7,7 +7,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: priceline-lambda-bedrock-handler
-      CodeUri: .
+      CodeUri: 
       Handler: handler.lambda_handler
       Runtime: python3.10
       Timeout: 25
@@ -42,7 +42,7 @@ Resources:
           AllowMethods: 
             - "*" 
           AllowOrigins: 
-            - "https://loyaltycloudservices-chat.streamlit.app" 
+            - "https://pricelineguru.streamlit.app" 
           ExposeHeaders: 
             - "*" 
           MaxAge: 300 

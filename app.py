@@ -3,7 +3,7 @@ import requests
 import json
 import os 
 
-st.title("Franchise Guru")
+st.title("Priceline Franchise Guru")
 
 # Sidebar or another section for instructions or summary information
 st.sidebar.title("Sample questions to get started")
@@ -45,7 +45,7 @@ if prompt := st.chat_input("How can I help you?"):
     # Specify the function URL
     function_url = os.environ.get('FUNCTION_URL')
 
-    with st.spinner('LCS Guru is thinking..shhhh'):  
+    with st.spinner('Priceline Guru is thinking..shhhh'):  
         response = requests.post(function_url, json=payload)
 
     # Check if the request was successful
