@@ -30,7 +30,7 @@ if 'sessionId' not in st.session_state:
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
-    with st.chat_message(message["role"], avatar=st.image('love.png')):
+    with st.chat_message(message["role"], avatar='love.png'):
         st.markdown(message["content"])
 
 # React to user input
