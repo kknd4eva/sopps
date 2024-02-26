@@ -3,7 +3,16 @@ import requests
 import json
 import os 
 
+hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
+
 st.title("Priceline Franchise Guru")
+st.set_page_config(page_title="Priceline Franchise Guru")
 
 # Sidebar or another section for instructions or summary information
 st.sidebar.title("Sample questions to get started")
@@ -66,6 +75,6 @@ if prompt := st.chat_input("How can I help you?"):
             st.markdown(answer)
 
         # Add assistant response to chat history
-        st.session_state.messages.append({"role": "assistant", "content": answer}, avatar='love.png')
+        st.session_state.messages.append({"role": "assistant", "content": answer})
     else:
         st.error(response)
